@@ -11,7 +11,7 @@ public class Calculator {
         if (a > 100000 || b > 10000) {
             throw new MaxInputException();
         }
-        if (a == 99 || b == 99) {
+        if (a == 99 && b == 99) {
             throw new InvalidInputException("Cannot add 99 and 99");
         }
         return a + b;
