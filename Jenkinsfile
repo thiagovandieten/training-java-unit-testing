@@ -26,7 +26,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh "mvn sonar:sonar -Dsonar.host.url=http://${ip}:9000"
+                    sh "mvn sonar:sonar"
                 }
             }
         }
