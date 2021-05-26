@@ -18,7 +18,7 @@ public class ShoppingList {
     public void take(String item) throws NoSuchItemException {
         boolean result = list.remove(item);
         if (!result) {
-            throw new NoSuchItemException(item + " not found on thee shopping list");
+            throw new NoSuchItemException(item + " not found on the shopping list");
         }
     }
 }
