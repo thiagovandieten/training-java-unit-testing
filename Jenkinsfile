@@ -6,6 +6,16 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        stage('Generate Javadoc') {
+            steps {
+                sh 'mvn javadoc:javadoc'
+            }
+            post {
+                always {
+                    javadoc 'target/site/apidocs/'
+                }
+            }
+        }
         stage('Test') {
             steps {
                 sh 'mvn test'
