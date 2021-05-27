@@ -23,8 +23,8 @@ public class CoffeeMachineTest {
 
     @Before
     public void setUp() {
-        coffeeContainer = new CoffeeContainer(10);
-        waterContainer = new WaterContainer(10);
+        coffeeContainer = mock(CoffeeContainer.class);
+        waterContainer = mock(WaterContainer.class);
         coffeeMachine = new CoffeeMachine(coffeeContainer, waterContainer);
     }
 
