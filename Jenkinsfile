@@ -1,12 +1,4 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.8-openjdk-17'
-        }
-    }
-    parameters {
-        string defaultValue: '', description: 'IP of local machine', name: 'ip'
-    }
     stages {
         stage('Build') {
             steps {
