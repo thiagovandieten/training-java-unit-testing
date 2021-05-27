@@ -9,11 +9,7 @@ pipeline {
         stage('Generate Javadoc') {
             steps {
                 sh 'mvn javadoc:javadoc'
-                post {
-                    always {
-                        javadocArchiver javadocDir: 'target/site/apidocs', keepAll: false
-                    }
-                }
+                step([$class: 'JavadocArchiver', javadocDir: 'target/site/javadoc', keepAll: true])
             }
         }
         stage('Test') {
