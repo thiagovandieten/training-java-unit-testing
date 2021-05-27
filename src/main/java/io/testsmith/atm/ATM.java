@@ -47,7 +47,7 @@ public class ATM {
      *
      * @return a double value representing money in the account
      *         available for withdrawal. The balance is guarenteed to
-     *         always be >= 0.
+     *         always be greater than or equal to 0.
      */
     public double getBalance() {
         return balance;
