@@ -6,6 +6,12 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        stage('Generate Javadoc') {
+            steps {
+                sh 'mvn javadoc:javadoc'
+                step([$class: 'JavadocArchiver', javadocDir: 'target/site/apidocs', keepAll: true])
+            }
+        }
         stage('Test') {
             steps {
                 sh 'mvn test'

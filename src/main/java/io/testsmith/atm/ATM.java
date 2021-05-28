@@ -47,7 +47,7 @@ public class ATM {
      *
      * @return a double value representing money in the account
      *         available for withdrawal. The balance is guarenteed to
-     *         always be >= 0.
+     *         always be greater than or equal to 0.
      */
     public double getBalance() {
         return balance;
@@ -68,7 +68,7 @@ public class ATM {
      * exception if the user does not have the balance to cover the
      * withdrawal.
      *
-     * @param amount double value that is >= current balance
+     * @param amount double value that is greater than or equal to current balance
      * @return double value of amount actually withdrawn
      * @throws IllegalArgumentException if request withdraw amount is
      *         less than the amount currently in account balance.
