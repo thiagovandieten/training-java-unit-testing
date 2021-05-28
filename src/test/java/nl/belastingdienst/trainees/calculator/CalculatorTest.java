@@ -13,10 +13,10 @@ public class CalculatorTest {
 
     @Test(expected = MaxInputException.class)
     public void TryAInputOver10000() throws MaxInputException, InvalidInputException {
-        calculator.add(11000,9000);
+        calculator.add(11000,10001);
     }
 
-    @Test
+    @Test(expected = CannotDivideByZeroException.class)
     public void DivideByZero() throws MaxInputException, CannotDivideByZeroException {
         calculator.divide(3000, 0);
     }
