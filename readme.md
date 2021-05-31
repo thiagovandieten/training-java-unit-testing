@@ -1,0 +1,1 @@
+This project was part of a Java for testers course I followed.
